@@ -3,51 +3,50 @@
 // Media query para pantallas menores a 952px
 @media (max-width: 952px) {
     .enlace {
-      padding-left: 20px;
+        padding-left: 20px;
     }
-  
+
     nav ul li a {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
-  // Media query para pantallas menores a 858px
-  @media (max-width: 858px) {
+}
+
+// Media query para pantallas menores a 858px
+@media (max-width: 858px) {
     .checkbtn {
-      display: block;
+        display: block;
     }
-  
+
     .navbar {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #a706f1;
-      top: 63px;
-      left: -100%;
-      text-align: center;
-      transition: left 0.55s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #a706f1;
+        top: 63px;
+        left: -100%;
+        text-align: center;
+        transition: left 0.55s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-  
+
     .navbar a {
-      display: block;
-      margin: 20px 0;
-      line-height: 30px;
-      font-size: 20px;
-      width: 100%;
-      text-align: center;
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
     }
-  
-    #check:checked ~ .navbar {
-      left: 0;
+
+    #check:checked~.navbar {
+        left: 0;
     }
-  
+
     li:hover,
     li.active {
-      background: none;
+        background: none;
     }
-  }
-  
+}

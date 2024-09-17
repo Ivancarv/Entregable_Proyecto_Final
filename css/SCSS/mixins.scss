@@ -20,15 +20,19 @@
 
 // Mixin para media queries
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == small {
+  @if $breakpoint ==small {
     @media (max-width: $small-screen) {
       @content;
     }
-  } @else if $breakpoint == medium {
+  }
+
+  @else if $breakpoint ==medium {
     @media (max-width: $medium-screen) {
       @content;
     }
-  } @else if $breakpoint == large {
+  }
+
+  @else if $breakpoint ==large {
     @media (max-width: $large-screen) {
       @content;
     }

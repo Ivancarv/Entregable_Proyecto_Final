@@ -138,14 +138,15 @@ body {
     }
 }
 
-.btn, .title {
+.btn,
+.title {
     font-size: 1.5rem;
-  
+
     @include respond-to(small) {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
-  
+}
+
 
 /* Contenido principal */
 .content {
@@ -238,16 +239,17 @@ body {
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;
         justify-content: center;
+
         @include respond-to(medium) {
             grid-template-columns: repeat(3, 1fr); // Ajuste en pantallas medianas
-          }
-        
-          @include respond-to(small) {
-            grid-template-columns: repeat(2, 1fr); // Ajuste en pantallas pequeñas
-          }
-        
+        }
 
-        
+        @include respond-to(small) {
+            grid-template-columns: repeat(2, 1fr); // Ajuste en pantallas pequeñas
+        }
+
+
+
     }
 
     .product-item {
@@ -375,12 +377,12 @@ p {
 
     .footer {
         padding: 20px;
-      
+
         @include respond-to(small) {
-          padding: 10px;
+            padding: 10px;
         }
-      }
-      
+    }
+
 }
 
 /* Sección de tickets */
@@ -409,7 +411,7 @@ p {
         width: 50px;
         height: 50px;
         @include transition(transform);
-        
+
         &:hover {
             transform: scale(1.1);
         }
@@ -471,7 +473,7 @@ p {
         }
     }
 
-    #check:checked ~ .navbar {
+    #check:checked~.navbar {
         left: 0;
     }
 
@@ -480,4 +482,3 @@ p {
         background: none;
     }
 }
-

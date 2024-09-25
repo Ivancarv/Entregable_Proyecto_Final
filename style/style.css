@@ -70,7 +70,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background: url(/imagenes/fundo.jpg) no-repeat center;
+  background: url(../imagenes/fundo.jpg) no-repeat center;
   background-size: cover;
 }
 

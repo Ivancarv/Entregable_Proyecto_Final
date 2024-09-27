@@ -392,8 +392,6 @@ p {
   transform: scale(1.1);
 }
 
-
-
 /* Media queries */
 @media (max-width: 858px) {
   .checkbtn {
@@ -403,80 +401,35 @@ p {
   .head .navbar {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    top: 60px;
+    left: 0;
+    right: 0;
     background: #171717;
-    top: 80px;
-    right: -100%;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head .navbar a {
+    padding: 15px;
     text-align: center;
-    transition: all 0.5s;
+    font-size: 18px;
+    width: 100%;
   }
 
-  .head .navbar a {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+  .head.active .navbar {
+    display: flex;
   }
 
-  .head .navbar a:hover {
-    background: none;
+  .head.active .checkbtn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
   }
 
-  #check:checked~.navbar {
-    right: 0;
-  }
-}
-
-/* Estilos del botón de menú  */
-.checkbtn {
-  font-size: 30px;
-  color: #fff;
-  float: right;
-  line-height: 63px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-@media (max-width: 858px) {
-  .checkbtn {
-    display: block;
-  }
-}
-
-.head .navbar {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #171717;
-  top: 80px;
-  right: -100%;
-  text-align: center;
-  transition: all 0.5s;
-  display: flex;
-  flex-direction: column;
-
-  .head .navbar a {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  .head .navbar a:hover {
-    background: none;
-  }
-
-  #check:checked~.navbar {
-    right: 0;
-  }
-}
-
-@media (max-width: 1200px) {
-  .product-section .product-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .head .dropdown-content {
+    min-width: 100%;
   }
 }
 
@@ -486,8 +439,41 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .product-section .product-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Menú de navegación móvil */
+.checkbtn {
+  display: none; /* Oculto por defecto */
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+      display: block; /* Mostrar botón de hamburguesa en móviles */
+      font-size: 30px;
+      cursor: pointer;
+      color: #fff; /* Color del icono de la hamburguesa */
+  }
+
+  .head .navbar {
+      display: none; /* Ocultar barra de navegación en móvil */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 63px; /* Ajusta según la altura de tu barra de navegación */
+      left: 0;
+      background: #171717; /* Fondo del menú móvil */
+  }
+
+  #check:checked ~ .navbar {
+      display: flex; /* Mostrar barra de navegación cuando el checkbox está marcado */
+  }
+
+  .head .navbar a {
+      padding: 15px; /* Espaciado para los enlaces */
+      text-align: center; /* Centrar el texto */
   }
 }

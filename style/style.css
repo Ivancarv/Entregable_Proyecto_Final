@@ -447,33 +447,33 @@ p {
 
 /* Menú de navegación móvil */
 .checkbtn {
-  display: none; /* Oculto por defecto */
+  display: none; 
 }
 
 @media (max-width: 858px) {
   .checkbtn {
-      display: block; /* Mostrar botón de hamburguesa en móviles */
+      display: block;
       font-size: 30px;
       cursor: pointer;
-      color: #fff; /* Color del icono de la hamburguesa */
+      color: #fff; 
   }
 
   .head .navbar {
-      display: none; /* Ocultar barra de navegación en móvil */
+      display: none; 
       flex-direction: column;
       width: 100%;
       position: absolute;
-      top: 63px; /* Ajusta según la altura de tu barra de navegación */
+      top: 63px; 
       left: 0;
-      background: #171717; /* Fondo del menú móvil */
+      background: #171717; 
   }
 
   #check:checked ~ .navbar {
-      display: flex; /* Mostrar barra de navegación cuando el checkbox está marcado */
+      display: flex; 
   }
 
   .head .navbar a {
-      padding: 15px; /* Espaciado para los enlaces */
-      text-align: center; /* Centrar el texto */
+      padding: 15px; 
+      text-align: center; 
   }
 }
